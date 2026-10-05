@@ -1,16 +1,18 @@
+from tts_formatter import process_tts_string
+
+
 class DramatizerPipeline:
 
-    def __init__(self, transformations, generator, evaluator):
-        self.transformations = transformations
+    def __init__(self, generator, evaluator):
         self.generator = generator
         self.evaluator = evaluator
 
 
     def evaluate_candidate(self, candidate, reference_text, reference_audio, output_path):
-        modified_text = candidate.apply(reference_text, self.transformations)
+        plan = process_tts_string(reference_text, candidate.operations)
 
-        self.generator.generate(text=modified_text, reference_audio=reference_audio, output_path=output_path)
+        self.generator.generate(plan=plan, reference_audio=reference_audio, reference_text=reference_text, output_path=output_path)
 
-        scores = self.evaluator.evaluate(reference_audio=reference_audio, generated_audio=output_path, reference_text=reference_text)
+        scores = self.evaluator.evaluate(reference_audio=reference_audio, generated_audio=output_path, reference_text=reference_text, candidate=candidate)
 
-        return modified_text, scores
+        return plan, scores

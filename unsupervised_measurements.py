@@ -58,6 +58,7 @@ import numpy as np
 import parselmouth
 import soundfile as sf
 from parselmouth.praat import call
+from scipy.signal import resample_poly
 
 # --------------------------------------------------------------------------- #
 # 1. Settings
@@ -414,7 +415,18 @@ def transcribe(wav: str | Path, cfg: Config = CFG) -> str:
     if kind == "faster":
         segments, _ = model.transcribe(str(wav), language=cfg.language, beam_size=1)
         return " ".join(s.text for s in segments)
-    return model.transcribe(str(wav), language=cfg.language, fp16=False)["text"]
+    
+    audio, sr = load_audio(wav)
+    target_sr = 16000
+    if sr != target_sr:
+        from math import gcd
+
+        g = gcd(sr, target_sr)
+        audio = resample_poly(audio, target_sr // g, sr // g)
+
+    audio = audio.astype(np.float32)
+    result = model.transcribe(audio, language=cfg.language, fp16=False)
+    return result["text"]
 
 
 def word_error_rate(wav: str | Path, text: str, cfg: Config = CFG) -> float:
