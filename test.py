@@ -30,7 +30,7 @@ candidate = Candidate([
     {
         "feature": "emphasis",
         "kwargs": {
-            "target": "never"
+            "target": "I"
         }
     },
     {
