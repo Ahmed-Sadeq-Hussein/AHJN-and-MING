@@ -97,7 +97,7 @@ class Explorer:
             "pause_share",
             "f0_median_hz",
             "f0_range_st",
-            "loud_dyn_db",
+            "loud_dyn_db"
         ]
 
         return np.array(
@@ -210,7 +210,6 @@ class Explorer:
 
         seen = {self._genome_key(start)}
 
-        # (candidate, originating step)
         parents = [(start.copy(), 0)]
 
         valid_results = []

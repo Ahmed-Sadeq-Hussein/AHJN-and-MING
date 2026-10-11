@@ -13,7 +13,6 @@ class GenomeHistory:
         self.load()
 
 
-
     def load(self):
         if not self.history_path.exists():
             self.records = []

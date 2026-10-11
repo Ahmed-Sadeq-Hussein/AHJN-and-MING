@@ -23,7 +23,7 @@ MODEL_DIR = (
 
 VOICE_DATA = Path("Voices/Voices")
 
-VOICE_ID = "ahmed"
+VOICE_ID = "riven"
 
 reference_audio = (
     VOICE_DATA /
@@ -57,7 +57,7 @@ history = GenomeHistory(
 
 factory = GenomeFactory(
     min_operations=1,
-    max_operations=4
+    max_operations=6
 )
 
 pipeline = DramatizerPipeline(
@@ -85,7 +85,7 @@ results = dramatizer.run(
     reference_text=reference_text,
     use_history=True,
     steps=30,
-    n_outputs=10,
+    n_outputs=10
 )
 
 print(f"\nSelected {len(results)} candidates:")
