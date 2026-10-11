@@ -1,0 +1,632 @@
+{
+  "ahmed": [
+    {
+      "words": 10,
+      "gen_time": 5.924,
+      "audio_len": 5.52,
+      "rtf": 1.073,
+      "wer": 0.0,
+      "sim": 0.7986,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 7.732,
+      "audio_len": 8.6,
+      "rtf": 0.899,
+      "wer": 0.05,
+      "sim": 0.7894,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 14.664,
+      "audio_len": 15.0,
+      "rtf": 0.978,
+      "wer": 0.0,
+      "sim": 0.7779,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "error": null
+    }
+  ],
+  "david": [
+    {
+      "words": 10,
+      "gen_time": 8.439,
+      "audio_len": 6.32,
+      "rtf": 1.335,
+      "wer": 0.5,
+      "sim": 0.8728,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "for the ancient fortress stood silent beneath the pale silver moon in the dark.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 7.57,
+      "audio_len": 6.76,
+      "rtf": 1.12,
+      "wer": 0.1,
+      "sim": 0.8848,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "the ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of campus battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 13.332,
+      "audio_len": 13.76,
+      "rtf": 0.969,
+      "wer": 0.225,
+      "sim": 0.9043,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "the ancient fortress to its silent beneath the pale silver moon. It's crumbling towers telling tales of campless baffles long forgotten. Within cold stone walls, secret slept for centuries waiting for one bold so to seek and claim their dark inheritance.",
+      "error": null
+    }
+  ],
+  "Ego": [
+    {
+      "words": 10,
+      "gen_time": 5.795,
+      "audio_len": 4.48,
+      "rtf": 1.293,
+      "wer": 0.0,
+      "sim": 0.8351,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "the ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 8.961,
+      "audio_len": 8.6,
+      "rtf": 1.042,
+      "wer": 0.0,
+      "sim": 0.8458,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 20.105,
+      "audio_len": 20.44,
+      "rtf": 0.984,
+      "wer": 0.075,
+      "sim": 0.8679,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers, telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bald soul to seek and claim their dark inheritance.",
+      "error": null
+    }
+  ],
+  "evelynn": [
+    {
+      "words": 10,
+      "gen_time": 6.849,
+      "audio_len": 4.36,
+      "rtf": 1.571,
+      "wer": 0.0,
+      "sim": 0.7868,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 9.784,
+      "audio_len": 9.36,
+      "rtf": 1.045,
+      "wer": 0.05,
+      "sim": 0.7908,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 16.448,
+      "audio_len": 17.52,
+      "rtf": 0.939,
+      "wer": 0.05,
+      "sim": 0.7754,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark and heredin.",
+      "error": null
+    }
+  ],
+  "hugo": [
+    {
+      "words": 10,
+      "gen_time": 6.367,
+      "audio_len": 6.0,
+      "rtf": 1.061,
+      "wer": 0.1,
+      "sim": 0.8193,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silence beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 9.664,
+      "audio_len": 10.48,
+      "rtf": 0.922,
+      "wer": 0.05,
+      "sim": 0.8528,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 15.962,
+      "audio_len": 15.32,
+      "rtf": 1.042,
+      "wer": 0.075,
+      "sim": 0.8185,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress did silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries waiting for one bold soul to seek and claim their dark inheritance.",
+      "error": null
+    }
+  ],
+  "jhin": [
+    {
+      "words": 10,
+      "gen_time": 6.837,
+      "audio_len": 5.72,
+      "rtf": 1.195,
+      "wer": 0.0,
+      "sim": 0.6552,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 9.416,
+      "audio_len": 10.0,
+      "rtf": 0.942,
+      "wer": 0.15,
+      "sim": 0.8838,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling tower is telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 17.567,
+      "audio_len": 19.08,
+      "rtf": 0.921,
+      "wer": 0.15,
+      "sim": 0.7666,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers, telling tales of countless battles, long forgotten, within cold stone walls. Secrets slept for centuries waiting for one bold soul to seek and claim their dark inheritance.",
+      "error": null
+    }
+  ],
+  "Joffrey": [
+    {
+      "words": 10,
+      "gen_time": 6.023,
+      "audio_len": 5.6,
+      "rtf": 1.076,
+      "wer": 0.0,
+      "sim": 0.7203,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 8.514,
+      "audio_len": 9.12,
+      "rtf": 0.934,
+      "wer": 0.05,
+      "sim": 0.8295,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 12.078,
+      "audio_len": 13.32,
+      "rtf": 0.907,
+      "wer": 0.175,
+      "sim": 0.827,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortressed silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls secrets that for centuries waiting for one bold soul to seek and claim their darkened heritans,",
+      "error": null
+    }
+  ],
+  "julius": [
+    {
+      "words": 10,
+      "gen_time": 6.024,
+      "audio_len": 5.88,
+      "rtf": 1.024,
+      "wer": 0.0,
+      "sim": 0.8984,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 8.451,
+      "audio_len": 8.44,
+      "rtf": 1.001,
+      "wer": 0.1,
+      "sim": 0.8981,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress did silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 14.677,
+      "audio_len": 16.04,
+      "rtf": 0.915,
+      "wer": 0.075,
+      "sim": 0.894,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles. Long forgotten within cold stone malls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "error": null
+    }
+  ],
+  "mitchell": [
+    {
+      "words": 10,
+      "gen_time": 5.213,
+      "audio_len": 4.32,
+      "rtf": 1.207,
+      "wer": 0.0,
+      "sim": 0.8521,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 8.754,
+      "audio_len": 9.16,
+      "rtf": 0.956,
+      "wer": 0.05,
+      "sim": 0.8403,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 13.528,
+      "audio_len": 14.92,
+      "rtf": 0.907,
+      "wer": 0.075,
+      "sim": 0.8469,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten, within cold stone walls secrets slept for centuries waiting for one bold soul to seek and claim their dark inheritance.",
+      "error": null
+    }
+  ],
+  "mordekaiser": [
+    {
+      "words": 10,
+      "gen_time": 6.024,
+      "audio_len": 4.48,
+      "rtf": 1.345,
+      "wer": 1.0,
+      "sim": 0.5287,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "为切解",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 9.458,
+      "audio_len": 10.32,
+      "rtf": 0.916,
+      "wer": 0.25,
+      "sim": 0.8013,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "See, the ancient fortress stood silent, beneath the pale silver moon. It's crumbling towers, telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 20.988,
+      "audio_len": 22.52,
+      "rtf": 0.932,
+      "wer": 0.325,
+      "sim": 0.8228,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "See, the airtrix stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets swept for centuries, waste hair one bold soul to seek.",
+      "error": null
+    }
+  ],
+  "riven": [
+    {
+      "words": 10,
+      "gen_time": 5.08,
+      "audio_len": 4.44,
+      "rtf": 1.144,
+      "wer": 0.0,
+      "sim": 0.8682,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 9.419,
+      "audio_len": 8.4,
+      "rtf": 1.121,
+      "wer": 0.1,
+      "sim": 0.8766,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. It's crumbling towers telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 14.976,
+      "audio_len": 15.4,
+      "rtf": 0.972,
+      "wer": 0.15,
+      "sim": 0.8882,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon its crumbling towers telling tales of countless battles long forgotten within. Cold stone walls secret slept for centuries waiting for one bold soul to seek and claim their dark inheritance.",
+      "error": null
+    }
+  ],
+  "samira": [
+    {
+      "words": 10,
+      "gen_time": 5.324,
+      "audio_len": 5.0,
+      "rtf": 1.065,
+      "wer": 0.0,
+      "sim": 0.7851,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 9.113,
+      "audio_len": 9.4,
+      "rtf": 0.969,
+      "wer": 0.05,
+      "sim": 0.7968,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 15.192,
+      "audio_len": 15.24,
+      "rtf": 0.997,
+      "wer": 0.025,
+      "sim": 0.7867,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "error": null
+    }
+  ],
+  "Silco": [
+    {
+      "words": 10,
+      "gen_time": 6.27,
+      "audio_len": 4.0,
+      "rtf": 1.568,
+      "wer": 0.0,
+      "sim": 0.8165,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 8.722,
+      "audio_len": 8.36,
+      "rtf": 1.043,
+      "wer": 0.25,
+      "sim": 0.8901,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "Ancient fortress stood silent beneath the pale silver moon. Its grumbling towers tell entails of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 16.209,
+      "audio_len": 17.8,
+      "rtf": 0.911,
+      "wer": 0.225,
+      "sim": 0.8996,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles, long forgotten, with in cold stone walls secret slept for centuries, waiting for one bold soul to seek and claim their dark in heriton.",
+      "error": null
+    }
+  ],
+  "swain": [
+    {
+      "words": 10,
+      "gen_time": 6.736,
+      "audio_len": 5.52,
+      "rtf": 1.22,
+      "wer": 0.0,
+      "sim": 0.8423,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 9.321,
+      "audio_len": 9.24,
+      "rtf": 1.009,
+      "wer": 0.0,
+      "sim": 0.8344,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 15.895,
+      "audio_len": 16.84,
+      "rtf": 0.944,
+      "wer": 0.025,
+      "sim": 0.8702,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "error": null
+    }
+  ],
+  "tahmkench": [
+    {
+      "words": 10,
+      "gen_time": 6.306,
+      "audio_len": 5.08,
+      "rtf": 1.241,
+      "wer": 0.0,
+      "sim": 0.822,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 8.262,
+      "audio_len": 8.52,
+      "rtf": 0.97,
+      "wer": 0.1,
+      "sim": 0.8171,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood solid beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 13.631,
+      "audio_len": 14.48,
+      "rtf": 0.941,
+      "wer": 0.4,
+      "sim": 0.8995,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten within cold stone walls, secrets leapt for centuries.",
+      "error": null
+    }
+  ],
+  "thresh": [
+    {
+      "words": 10,
+      "gen_time": 6.516,
+      "audio_len": 5.32,
+      "rtf": 1.225,
+      "wer": 0.0,
+      "sim": 0.7588,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 9.885,
+      "audio_len": 10.52,
+      "rtf": 0.94,
+      "wer": 0.05,
+      "sim": 0.7553,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 14.034,
+      "audio_len": 15.32,
+      "rtf": 0.916,
+      "wer": 0.075,
+      "sim": 0.7553,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark and heriton.",
+      "error": null
+    }
+  ],
+  "Tywin": [
+    {
+      "words": 10,
+      "gen_time": 7.611,
+      "audio_len": 6.56,
+      "rtf": 1.16,
+      "wer": 0.0,
+      "sim": 0.69,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 10.667,
+      "audio_len": 11.56,
+      "rtf": 0.923,
+      "wer": 0.2,
+      "sim": 0.7974,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress had silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long could gotten.",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 15.381,
+      "audio_len": 16.84,
+      "rtf": 0.913,
+      "wer": 0.1,
+      "sim": 0.7744,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers, telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and play in their dark inheritance.",
+      "error": null
+    }
+  ],
+  "Tywin_2": [
+    {
+      "words": 10,
+      "gen_time": 6.261,
+      "audio_len": 3.6,
+      "rtf": 1.739,
+      "wer": 0.0,
+      "sim": 0.812,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon.",
+      "error": null
+    },
+    {
+      "words": 20,
+      "gen_time": 8.86,
+      "audio_len": 8.24,
+      "rtf": 1.075,
+      "wer": 0.3,
+      "sim": 0.8143,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.",
+      "heard": "The ancient fortress stood silent beneath the pale silber moon. Its crumbling towers, telling tales of countless battles,",
+      "error": null
+    },
+    {
+      "words": 40,
+      "gen_time": 10.042,
+      "audio_len": 8.72,
+      "rtf": 1.152,
+      "wer": 0.625,
+      "sim": 0.8138,
+      "expected": "The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.",
+      "heard": "The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of counters battles.",
+      "error": null
+    }
+  ]
+}

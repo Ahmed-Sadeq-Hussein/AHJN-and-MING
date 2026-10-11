@@ -1,0 +1,26 @@
+Benchmark Report — Joffrey
+Run: 2026-06-06 09:55
+============================================================
+Words   GenTime     AudioLen    RTF     WER%      Similarity
+------------------------------------------------------------
+10      6.02        5.6         1.08    0.0       0.720
+20      8.51        9.1         0.93    5.0       0.830
+40      12.08       13.3        0.91    17.5      0.827
+
+Transcription details:
+------------------------------------------------------------
+
+[10 words]
+  Expected : The ancient fortress stood silent beneath the pale silver moon.
+  Heard    : The ancient fortress stood silent beneath the pale silver moon.
+  WER      : 0.0%
+
+[20 words]
+  Expected : The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.
+  Heard    : The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles long forgotten.
+  WER      : 5.0%
+
+[40 words]
+  Expected : The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.
+  Heard    : The ancient fortressed silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls secrets that for centuries waiting for one bold soul to seek and claim their darkened heritans,
+  WER      : 17.5%

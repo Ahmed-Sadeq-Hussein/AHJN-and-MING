@@ -1,0 +1,26 @@
+Benchmark Report — Silco
+Run: 2026-06-06 09:59
+============================================================
+Words   GenTime     AudioLen    RTF     WER%      Similarity
+------------------------------------------------------------
+10      6.27        4.0         1.57    0.0       0.817
+20      8.72        8.4         1.04    25.0      0.890
+40      16.21       17.8        0.91    22.5      0.900
+
+Transcription details:
+------------------------------------------------------------
+
+[10 words]
+  Expected : The ancient fortress stood silent beneath the pale silver moon.
+  Heard    : The ancient fortress stood silent beneath the pale silver moon.
+  WER      : 0.0%
+
+[20 words]
+  Expected : The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten.
+  Heard    : Ancient fortress stood silent beneath the pale silver moon. Its grumbling towers tell entails of countless battles long forgotten.
+  WER      : 25.0%
+
+[40 words]
+  Expected : The ancient fortress stood silent beneath the pale silver moon, its crumbling towers telling tales of countless battles long forgotten. Within cold stone walls, secrets slept for centuries, waiting for one bold soul to seek and claim their dark inheritance.
+  Heard    : The ancient fortress stood silent beneath the pale silver moon. Its crumbling towers telling tales of countless battles, long forgotten, with in cold stone walls secret slept for centuries, waiting for one bold soul to seek and claim their dark in heriton.
+  WER      : 22.5%

@@ -1,0 +1,40 @@
+[
+    {
+        "voice_id": "julius_gold",
+        "reference_audio": "Voices/Voices/julius_gold/reference.wav",
+        "genome": [
+            {
+                "feature": "emphasis",
+                "position": 0.333333
+            },
+            {
+                "feature": "speed",
+                "rate": 0.8
+            }
+        ],
+        "mos": 4.5,
+        "wer": 0.0,
+        "speaker_similarity": 0.85
+    },
+    {
+        "voice_id": "julius_gold",
+        "reference_audio": "Voices/Voices/julius_gold/reference.wav",
+        "genome": [
+            {
+                "feature": "emphasis",
+                "word_index": 2
+            },
+            {
+                "feature": "breath",
+                "word_index": 6
+            },
+            {
+                "feature": "speed",
+                "rate": 0.8
+            }
+        ],
+        "mos": 4.5,
+        "wer": 0.0,
+        "speaker_similarity": 0.85
+    }
+]
