@@ -23,7 +23,7 @@ MODEL_DIR = (
 
 VOICE_DATA = Path("Voices/Voices")
 
-VOICE_ID = "riven"
+VOICE_ID = "Tywin_2"
 
 reference_audio = (
     VOICE_DATA /
@@ -84,7 +84,7 @@ results = dramatizer.run(
     reference_audio=reference_audio,
     reference_text=reference_text,
     use_history=True,
-    steps=30,
+    steps=100,
     n_outputs=10
 )
 
