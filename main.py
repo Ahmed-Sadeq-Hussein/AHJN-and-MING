@@ -1,3 +1,5 @@
+# Ahmed Hussein, Hieu Minh Tran, Julius Norén
+
 from pathlib import Path
 import sys
 
