@@ -3,8 +3,8 @@
 
 CosyVoice/
 output/
-Voices/hugo
-Voices/mitchell
+Voices/hugo/
+Voices/mitchell/
 history/
 
 ### Python ###
