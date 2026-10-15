@@ -1,3 +1,5 @@
+## This code is for measurements only. using Jiwer and resembleryzer .
+
 """unsupervised_measurements.py | Automatic metrics and the reward built from them.
 
 Everything in this file is computed by the machine alone: no human ratings, no
