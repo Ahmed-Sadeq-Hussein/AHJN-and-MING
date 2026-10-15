@@ -3,6 +3,8 @@
 
 CosyVoice/
 output/
+Voices/hugo
+Voices/mitchell
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
