@@ -23,7 +23,7 @@ MODEL_DIR = (
 
 VOICE_DATA = Path("Voices/Voices")
 
-VOICE_ID = "Tywin_2"
+VOICE_ID = "ahmed"
 
 reference_audio = (
     VOICE_DATA /
