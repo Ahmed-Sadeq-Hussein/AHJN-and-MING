@@ -20,8 +20,9 @@ What goes into the reward
 
     validity         six cheap checks: duration, silence, voicing, emphasis sense,
                      pause sense, parsimony                         (signal processing)
-    intelligibility  word error rate of a speech recogniser vs the text   (needs Whisper)
-    same_speaker     speaker similarity to the reference clip         (needs Resemblyzer)
+    intelligibility  word error rate of a speech recogniser vs the text,
+                     scored with jiwer                              (needs Whisper)
+    same_speaker     speaker similarity to the reference clip   (Resemblyzer, required)
     expressiveness   how far the delivery is from what was heard before, through a
                      Wundt curve: moderate novelty scores best     (signal processing)
 
@@ -36,11 +37,13 @@ Command line
 
 Dependencies
 ------------
-    always:    numpy, soundfile, praat-parselmouth
-    optional:  faster-whisper (or openai-whisper)  -> intelligibility guard
+    always:    numpy, scipy, soundfile, praat-parselmouth
                resemblyzer                          -> same-speaker guard
-    A missing optional library never crashes a run: that guard is skipped, counted as
-    passed, and named in Reward.skipped.
+               jiwer                                -> word error rate
+    optional:  faster-whisper (or openai-whisper)  -> the transcript jiwer scores
+    Resemblyzer and jiwer are imported at the top: without them this module does not
+    load. A missing Whisper never crashes a run: the intelligibility guard is skipped,
+    counted as passed, and named in Reward.skipped.
 """
 from __future__ import annotations
 
@@ -54,10 +57,12 @@ from dataclasses import asdict, dataclass, field
 from pathlib import Path
 from typing import Iterable, Sequence
 
+import jiwer
 import numpy as np
 import parselmouth
 import soundfile as sf
 from parselmouth.praat import call
+from resemblyzer import VoiceEncoder, preprocess_wav
 from scipy.signal import resample_poly
 
 # --------------------------------------------------------------------------- #
@@ -371,7 +376,7 @@ def wundt(n: float, n0: float = CFG.wundt_n0, sigma: float = CFG.wundt_sigma) ->
 
 
 # --------------------------------------------------------------------------- #
-# 6. Intelligibility: word error rate (optional, needs Whisper)
+# 6. Intelligibility: word error rate with jiwer (transcript needs Whisper)
 # --------------------------------------------------------------------------- #
 
 _whisper = None  # (kind, model), loaded on first use
@@ -383,22 +388,12 @@ def normalise_text(text: str) -> list[str]:
     return re.findall(r"[a-z0-9']+", text.lower())
 
 
-def _edit_distance(a: Sequence[str], b: Sequence[str]) -> int:
-    prev = list(range(len(b) + 1))
-    for i, wa in enumerate(a, 1):
-        cur = [i]
-        for j, wb in enumerate(b, 1):
-            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (wa != wb)))
-        prev = cur
-    return prev[-1]
-
-
 def wer_between(reference_text: str, heard_text: str) -> float:
-    """Word error rate: word edits needed, divided by the number of reference words."""
+    """Word error rate (jiwer): word edits needed, divided by the number of reference words."""
     ref, hyp = normalise_text(reference_text), normalise_text(heard_text)
     if not ref:
         raise ValueError("reference text has no words")
-    return _edit_distance(ref, hyp) / len(ref)
+    return float(jiwer.wer(" ".join(ref), " ".join(hyp)))
 
 
 def transcribe(wav: str | Path, cfg: Config = CFG) -> str:
@@ -434,7 +429,7 @@ def word_error_rate(wav: str | Path, text: str, cfg: Config = CFG) -> float:
 
 
 # --------------------------------------------------------------------------- #
-# 7. Same speaker: similarity of speaker embeddings (optional, needs Resemblyzer)
+# 7. Same speaker: similarity of Resemblyzer speaker embeddings (required)
 # --------------------------------------------------------------------------- #
 
 _encoder = None
@@ -443,7 +438,6 @@ _embedding_cache: dict[tuple[str, float], np.ndarray] = {}
 
 def speaker_embedding(wav: str | Path) -> np.ndarray:
     global _encoder
-    from resemblyzer import VoiceEncoder, preprocess_wav
     if _encoder is None:
         _encoder = VoiceEncoder(verbose=False)
     key = (str(wav), Path(wav).stat().st_mtime)
@@ -488,7 +482,7 @@ def _neutral_features(neutral: str | Path | RawFeatures, cfg: Config) -> RawFeat
 
 
 def _optional(name: str, mode: bool | str, fn, skipped: list[str]) -> float | None:
-    """Run an optional metric. In "auto" mode a failure skips it, with one warning."""
+    """Run the optional WER metric. In "auto" mode a failure skips it, with one warning."""
     if mode is False:
         return None
     try:
@@ -509,7 +503,7 @@ def voice_reward(wav: str | Path, neutral: str | Path | RawFeatures, *,
                  archive: Sequence[np.ndarray] | None = None, scale: np.ndarray = DEFAULT_SCALE,
                  n_ops: int = 0, emphasised_words: Sequence[str] = (),
                  pause_after_words: Sequence[str] = (),
-                 use_wer: bool | str = "auto", use_similarity: bool | str = "auto",
+                 use_wer: bool | str = "auto", use_similarity: bool = True,
                  details: bool = False, cfg: Config = CFG) -> int | Reward:
     """Measure one clip with every automatic metric and return its reward.
 
@@ -517,14 +511,16 @@ def voice_reward(wav: str | Path, neutral: str | Path | RawFeatures, *,
     neutral        the same line in the same voice with no delivery changes (wav path,
                    or RawFeatures you already extracted)
     text           the words of the line. Needed for the intelligibility guard
-    reference_wav  the voice the clip should still sound like. Defaults to `neutral`
+    reference_wav  the voice the clip should still sound like. Defaults to `neutral`.
+                   Needed when `neutral` is RawFeatures, which carry no audio
     archive        behaviour vectors heard earlier in the run. Without it, novelty is
                    the distance from neutral
     scale          per-feature step sizes from fit_scale(). Defaults to rough values
-    use_wer / use_similarity
-                   "auto" = use when possible, skip quietly otherwise
+    use_wer        "auto" = use when possible, skip quietly otherwise
                    True   = required, raise if it cannot run
                    False  = never run (fast mode for inside the evolution loop)
+    use_similarity True   = required, raise if it cannot run (the default)
+                   False  = never run (fast mode)
     details        False returns an int 0..100. True returns the full Reward
 
     reward = validity * intelligibility * same_speaker * expressiveness
@@ -558,13 +554,10 @@ def voice_reward(wav: str | Path, neutral: str | Path | RawFeatures, *,
     ref = reference_wav if reference_wav is not None else (
         neutral if not isinstance(neutral, RawFeatures) else None)
     sim = None
-    if ref is None:
-        if use_similarity is True:
-            raise ValueError("use_similarity=True needs reference_wav or a neutral wav path")
-        if use_similarity == "auto":
-            skipped.append("same_speaker: no reference clip given")
-    else:
-        sim = _optional("same_speaker", use_similarity, lambda: speaker_similarity(wav, ref), skipped)
+    if use_similarity:
+        if ref is None:
+            raise ValueError("the same-speaker guard needs reference_wav or a neutral wav path")
+        sim = speaker_similarity(wav, ref)
     same_speaker = 1.0 if sim is None else _ramp(sim, cfg.sim_full, cfg.sim_zero)
 
     value = v * intelligibility * same_speaker * expressiveness
