@@ -5,6 +5,7 @@ CosyVoice/
 output/
 Voices/hugo
 Voices/mitchell
+history/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
